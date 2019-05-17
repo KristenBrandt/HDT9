@@ -1,0 +1,11 @@
+Guatemala, Izabal, 300
+Quetzaltenango, Escuintla, 245
+Escuintla, Izabal, 150
+Coban, Guatemala, 74
+Coban, Izabal, 67
+Quetzaltenango, Guatemala, 59
+Izabal, Guatemala, 300
+Izabal, Coban, 67
+Escuintla, Guatemala, 45
+Guatemala, Escuintla, 50
+Escuintla, Quetzaltenango, 98
