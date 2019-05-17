@@ -11,6 +11,20 @@ public class main {
             "\t La direccion del archivo tiene que ser en formato C:\\\\Users\\\\try\\\\Desktop\\\\intento.txt\n" +
             "\t Si la direccion no es aceptada al primer intento ponga la direccion de nuevo, es por un problema de cache ";
 
+    static String ciudades = "\n Elejir ciudad de origen:\n"+
+            "\t 1. Guatemala \n"+
+            "\t 2. Coban \n"+
+            "\t 3. Quetzaltenango \n"+
+            "\t 4. Escuintla \n"+
+            "\t 5. Izabal \n";
+
+    static String ciudades2 = "\n Elejir ciudad de origen:\n"+
+            "\t 1. Guatemala \n"+
+            "\t 2. Coban \n"+
+            "\t 3. Quetzaltenango \n"+
+            "\t 4. Escuintla \n"+
+            "\t 5. Izabal \n";
+
 
     public static void main(String[] args) {
         boolean deleviaje = true;
@@ -82,6 +96,7 @@ public class main {
                         orden[0]= uno;
                         orden[1]= dos;
                         orden[2]= tres;
+                        //este no sirve todavia
                         grafo[numeros] = orden;
 
                     }
@@ -91,12 +106,23 @@ public class main {
                 deleviaje = false;
             }
         } while (deleviaje);
+
         System.out.print("Cuantas ciudades diferentes hay en guategrafo.txt? \n");
         String vertices = input.nextLine();
         int ver = Integer.parseInt(vertices);
-        int[][] weights = grafo; //{{1, 3, -2}, {2, 1, 4}, {2, 3, 3}, {3, 4, 2}, {4, 2, -1}};
+        int[][] weights =  {{1, 5, 300}, {3, 4, 245}, {4, 5, 150}, {2, 1, 74}, {2, 5, 67}, {3, 1,  59},  {5, 1, 300} ,{4, 1, 45}, {1, 4, 50}, {4, 3, 98}};//grafo;
         int numVertices = ver;
-
+        System.out.print("Si sale este numero es que no hay camino posible: 2147483647\n");
         FloydWarshall.floydWarshall(weights, numVertices);
+        System.out.print(ciudades);
+        String opcion1 = input.nextLine();
+        int op1 = Integer.parseInt(opcion1);
+        System.out.print(ciudades2);
+        String opcion2 = input.nextLine();
+        int op2 = Integer.parseInt(opcion2);
+        Corto.encontrarCaminoMasCorto(weights,op1,op2);
+
+
     }
 }
+
